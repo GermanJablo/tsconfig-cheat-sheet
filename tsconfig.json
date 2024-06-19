@@ -1,4 +1,5 @@
 {
+  /* RECOMMENDATION: Disable optional settings that do not apply to your project with comments instead of deleting them. */
   "compilerOptions": {
     /* Base Options: */
     "esModuleInterop": true,
@@ -15,26 +16,21 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    /* If transpiling with TypeScript: */
+    /* DO YOU NEED TO TRANSPILE YOUR CODE WITH TSC? (e.g.: you are building for a library) */
+    /* If the answer is YES: */
     "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
-
-    /* AND if you're building for a library: */
     "declaration": true,
+    "composite": true, // Only in monorepos
+    "declarationMap": true, // Only in monorepos
 
-    /* AND if you're building for a library in a monorepo: */
-    "composite": true,
-    "declarationMap": true,
-
-    /* If NOT transpiling with TypeScript: */
+    /* If the answer is NO: */
     "module": "preserve",
     "noEmit": true,
 
-    /* If your code runs in the DOM: */
-    "lib": ["es2022", "dom", "dom.iterable"],
-
-    /* If your code doesn't run in the DOM: */
-    "lib": ["es2022"]
+    /* DOES YOUR CODE RUN IN THE BROWSER? */
+    "lib": ["es2022", "dom", "dom.iterable"], // if the answer is YES
+    "lib": ["es2022"] // if the answer is NO
   }
 }
