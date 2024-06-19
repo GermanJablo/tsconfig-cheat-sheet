@@ -16,8 +16,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    /* DO YOU NEED TO TRANSPILE YOUR CODE WITH TSC? (e.g.: you are building for a library) */
-    /* If the answer is YES: */
+    /* If you need to transpile your code with tsc (e.g.: you are building for a library) */
     "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
@@ -25,7 +24,7 @@
     "composite": true, // Only in monorepos
     "declarationMap": true, // Only in monorepos
 
-    /* If the answer is NO: */
+    /* If you do NOT need to transpile your code with tsc (The most likely option if you are not building for a library) */
     "module": "preserve",
     "noEmit": true,
 
